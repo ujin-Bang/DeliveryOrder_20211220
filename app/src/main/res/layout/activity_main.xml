@@ -8,6 +8,9 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.tabs.TabLayout
+        app:tabIndicatorColor="@color/black"
+        app:tabSelectedTextColor="@color/black"
+        android:scrollbarSize="3dp"
         android:id="@+id/mainTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
