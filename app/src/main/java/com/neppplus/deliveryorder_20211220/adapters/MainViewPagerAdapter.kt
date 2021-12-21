@@ -7,6 +7,14 @@ import com.neppplus.deliveryorder_20211220.fragment.MyProfileFragment
 import com.neppplus.deliveryorder_20211220.fragment.PizzaStoreListFragment
 
 class MainViewPagerAdapter(fm:FragmentManager): FragmentPagerAdapter(fm) {
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position){
+            0-> "피자 가게"
+            else -> "나의 프로필"
+        }
+    }
+
     override fun getCount(): Int {
         return 2
 
@@ -14,7 +22,7 @@ class MainViewPagerAdapter(fm:FragmentManager): FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
 
-        when (position){
+       return when (position){
 
             0-> PizzaStoreListFragment()
             else-> MyProfileFragment()
